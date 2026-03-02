@@ -217,16 +217,18 @@ a:hover { text-decoration: underline; }
 }
 
 
+
 .cta {
   background: #f7f7f7;
   padding: 42px 0;
 }
 
 .cta-inner {
+
   text-align: center;
 }
 
-
+.site-footer {
   background: #fafafa;
   border-top: 1px solid #eee;
   padding: 24px 0;
