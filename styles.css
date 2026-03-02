@@ -1,35 +1,12 @@
-/* a4stylesheet.css
-   A4: Intro CSS Fill-in Template
-   Completed + Styled for Gyurme Namgyal Engineering Portfolio
-*/
 
-/* ===== Google Font Import ===== */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap');
-
-/* ===== CSS Variables ===== */
-:root {
-  --navy:       #0d1b2a;
-  --navy-mid:   #1a2e42;
-  --navy-light: #243b55;
-  --amber:      #e8a045;
-  --amber-light:#f5c278;
-  --offwhite:   #f8f6f2;
-  --white:      #ffffff;
-  --gray-light: #edeae4;
-  --gray-mid:   #9a9590;
-  --text-dark:  #1a1a1a;
-  --text-muted: #5a5550;
-}
-
-/* ===== Base styles ===== */
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: var(--text-dark);
-  background: var(--offwhite);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #fff;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -40,361 +17,194 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
 }
 
-/* ===== Header ===== */
+
 .site-header {
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  background: var(--navy);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  border-bottom: 1px solid #eee;
+  background: #fff;
 }
 
 .header-inner {
-  /* TODO A (Flexbox):
-     Make the brand appear on the left and the navigation on the right.
-     Requirements:
-       - Use flexbox
-       - Center items vertically
-       - Put space between left and right
-  */
+  
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
+  align-items: center;
 }
 
 .brand {
-  font-family: 'DM Serif Display', serif;
-  font-size: 22px;
-  font-weight: 400;
-  color: var(--white);
-  letter-spacing: 0.02em;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .brand .dot {
-  /* TODO B (Color):
-     Make the dot a light blue accent color (choose a readable blue).
-  */
-  color: var(--amber);
+
+  color: #1d4ed8;
 }
 
 .site-nav a {
-  margin-left: 24px;
+  margin-left: 18px;
   text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  color: rgba(255,255,255,0.65);
-  font-weight: 500;
-  transition: color 0.2s;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #444;
 }
 
-.site-nav a:hover {
-  color: var(--amber);
-  text-decoration: none;
-}
 
-/* ===== Hero ===== */
 .hero {
-  /* TODO C (Background image hero):
-     Turn this into a hero banner with a background image.
-     Requirements:
-       - Use a background image URL (use the one below)
-       - Make it cover the area and center it
-       - Add a light overlay so text is readable
-       - Set a minimum height (e.g., 360px)
-  */
-  background-image:
-    linear-gradient(
-      135deg,
-      rgba(13, 27, 42, 0.88) 0%,
-      rgba(13, 27, 42, 0.65) 100%
-    ),
-    url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=60");
+ 
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                    url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=60");
   background-size: cover;
   background-position: center;
-  min-height: 420px;
-  position: relative;
-}
-
-/* subtle amber line accent at bottom of hero */
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--amber), transparent);
+  min-height: 360px;
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
-  /* TODO D (Center content):
-     Center the hero text horizontally.
-     Add vertical padding so it doesn't feel cramped.
-  */
+ 
   text-align: center;
-  padding: 90px 20px 80px;
+  padding: 60px 0;
+  width: 100%;
 }
 
 .hero h1 {
-  margin: 0 0 6px;
-  /* TODO E (Typography):
-     Make the headline large and uppercase.
-     (e.g., font-size around 42-48px, text-transform uppercase)
-  */
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(36px, 5vw, 56px);
-  font-weight: 400;
+  margin: 0;
+ 
+  font-size: 48px;
   text-transform: uppercase;
-  color: var(--white);
-  letter-spacing: 0.06em;
-  line-height: 1.1;
+  color: #0b1b2a; 
 }
 
 .hero-subhead {
-  margin: 10px 0 28px;
-  /* TODO F (Typography):
-     Make this slightly smaller than h1 and a softer color.
-     (e.g., font-size ~20-24px; color #555)
-  */
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.68);
-  letter-spacing: 0.02em;
+  margin: 6px 0 22px;
+  
+  font-size: 22px;
+  color: #334155;
 }
 
-/* ===== Buttons ===== */
+
 .btn {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: all 0.2s;
-  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .btn-dark {
-  /* TODO G (Button styling):
-     Make this a dark filled button with white text.
-  */
-  background: var(--amber);
-  color: var(--navy);
-}
 
-.btn-dark:hover {
-  background: var(--amber-light);
-  text-decoration: none;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(232, 160, 69, 0.35);
+  background: #0b1b2a;
+  color: #fff;
 }
 
 .btn-outline {
-  /* TODO H (Button styling):
-     Make this an outlined button with a blue border and matching text.
-  */
-  border: 2px solid rgba(255,255,255,0.5);
-  color: var(--white);
+ 
+  border: 2px solid #1d4ed8;
+  color: #1d4ed8;
   background: transparent;
-  margin-left: 10px;
 }
 
-.btn-outline:hover {
-  border-color: var(--amber);
-  color: var(--amber);
-  text-decoration: none;
-}
 
-/* ===== Features (3 columns) ===== */
 .features {
-  padding: 60px 0;
-}
-
-.features > .container > h2 {
-  text-align: center;
-  font-family: 'DM Serif Display', serif;
-  font-size: 28px;
-  font-weight: 400;
-  color: var(--navy);
-  margin: 0 0 8px;
-}
-
-.features > .container > p {
-  text-align: center;
-  color: var(--text-muted);
-  margin: 0 0 36px;
-  font-size: 15px;
+  padding: 42px 0;
 }
 
 .features-grid {
-  /* TODO I (Layout):
-     Arrange the three feature blocks in a row (desktop).
-     Requirements:
-       - Use flexbox
-       - Add a gap between items (e.g., 26px)
-  */
+
   display: flex;
-  gap: 24px;
+  gap: 26px;
 }
 
 .feature {
-  /* TODO J (Sizing / alignment):
-     Make each feature take equal width and center its text.
-  */
+  
   flex: 1;
   text-align: center;
-  background: var(--white);
-  border: 1px solid var(--gray-light);
-  border-radius: 10px;
-  padding: 32px 20px;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.feature:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(13,27,42,0.10);
-}
-
-.feature h3 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: var(--navy);
-  margin: 0 0 8px;
-}
-
-.feature p {
-  color: var(--text-muted);
-  font-size: 14px;
-  margin: 0;
 }
 
 .icon {
   width: 56px;
   height: 56px;
-  border: 2px solid var(--amber);
+  border: 2px solid #ddd;
   border-radius: 999px;
   display: grid;
   place-items: center;
-  margin: 0 auto 16px;
-  color: var(--amber);
+  margin: 0 auto 12px;
+  color: #666;
   font-size: 22px;
-  background: rgba(232,160,69,0.08);
 }
 
-/* ===== Featured content ===== */
+
 .featured {
-  padding: 60px 0;
-  background: var(--navy);
+  padding: 42px 0 36px;
+  background: #f7f7f7;
 }
 
 .section-title {
   text-align: center;
   margin: 0;
-  font-size: 11px;
-  letter-spacing: 0.18em;
+  font-size: 18px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--amber);
-  font-weight: 700;
+  color: #222;
 }
 
 .section-lede {
   text-align: center;
   max-width: 680px;
-  margin: 10px auto 32px;
-  color: rgba(255,255,255,0.60);
-  font-size: 14px;
-}
-
-.featured h2 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: 30px;
-  color: var(--white);
-  text-align: center;
-  margin: 6px 0 4px;
-}
-
-.media {
-  background: var(--navy-light);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 8px;
-  height: 260px;
-  display: grid;
-  place-items: center;
-  color: rgba(255,255,255,0.35);
+  margin: 10px auto 22px;
+  color: #444;
   font-size: 13px;
 }
 
-/* ===== Secondary content (2 cards) ===== */
-.secondary {
-  padding: 60px 0;
-  background: var(--offwhite);
+.media {
+  background: #eaeaea;
+  border: 1px solid #ddd;
+  height: 260px;
+  display: grid;
+  place-items: center;
 }
 
-.secondary > .container > h2 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: 28px;
-  color: var(--navy);
-  margin: 0 0 24px;
+
+.secondary {
+  padding: 34px 0 44px;
 }
 
 .secondary-grid {
-  /* TODO K (Layout):
-     Put the two cards next to each other on desktop.
-     Requirements:
-       - Use flexbox
-       - Add a gap (e.g., 26px)
-  */
+
   display: flex;
-  gap: 24px;
+  gap: 26px;
 }
 
 .card {
-  /* TODO L (Card styling):
-     Give each card a border and make it take equal width.
-  */
+  
   flex: 1;
-  border: 1px solid var(--gray-light);
-  border-radius: 10px;
-  overflow: hidden;
+  border: 1px solid #eee;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: var(--white);
-  transition: box-shadow 0.2s;
-}
-
-.card:hover {
-  box-shadow: 0 8px 28px rgba(13,27,42,0.10);
+  background: #fff;
 }
 
 .card-text {
-  padding: 24px;
+  padding: 18px;
 }
 
 .card-text h3 {
   margin: 0 0 8px;
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--amber);
-  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #0b1b2a;
 }
 
 .card-text p {
-  margin: 0 0 18px;
-  color: var(--text-muted);
-  font-size: 14px;
-  line-height: 1.6;
+  margin: 0 0 14px;
+  color: #444;
+  font-size: 13px;
 }
 
 .card-image {
-  min-height: 180px;
-  /* TODO M (Image block):
-     Make the card image behave like a background image:
-       - cover
-       - centered
-  */
+  min-height: 160px;
+
   background-size: cover;
   background-position: center;
 }
@@ -406,105 +216,53 @@ a:hover { text-decoration: underline; }
   background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=60");
 }
 
-/* ===== CTA ===== */
-.cta {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-  padding: 70px 0;
-  position: relative;
-  overflow: hidden;
-}
 
-.cta::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--amber), transparent);
+.cta {
+  background: #f7f7f7;
+  padding: 42px 0;
 }
 
 .cta-inner {
-  /* TODO N (Center CTA):
-     Center the CTA text and button.
-  */
   text-align: center;
 }
 
-.cta h2 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-size: 34px;
-  color: var(--white);
-  margin: 0 0 10px;
-}
 
-.cta p {
-  color: rgba(255,255,255,0.60);
-  font-size: 15px;
-  margin: 0 0 28px;
-}
-
-/* ===== Footer ===== */
-.site-footer {
-  background: var(--navy);
-  border-top: 1px solid rgba(255,255,255,0.06);
-  padding: 36px 0;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  padding: 24px 0;
 }
 
 .footer-inner {
-  /* TODO O (Footer layout):
-     Arrange footer-left on the left and footer link columns on the right.
-     Requirements:
-       - Use flexbox
-       - Add a gap (e.g., 24px)
-       - Space items out (left/right)
-  */
+
   display: flex;
-  gap: 24px;
   justify-content: space-between;
-  align-items: flex-start;
+  gap: 24px;
 }
 
 .footer-left {
   max-width: 360px;
-  color: rgba(255,255,255,0.40);
+  color: #444;
   font-size: 12px;
-  line-height: 1.7;
 }
 
-.footer-left strong {
-  display: block;
-  color: var(--white);
-  font-family: 'DM Serif Display', serif;
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 6px;
-}
-
-.footer-left a { color: var(--amber); }
+.footer-left a { color: #3a88a8; }
 
 .footer-cols {
   display: flex;
-  gap: 36px;
+  gap: 28px;
 }
 
 .footer-col h4 {
-  margin: 0 0 10px;
-  font-size: 10px;
+  margin: 0 0 8px;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--amber);
-  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #222;
 }
 
 .footer-col a {
   display: block;
   font-size: 12px;
-  color: rgba(255,255,255,0.50);
-  margin: 8px 0;
-  transition: color 0.2s;
-}
-
-.footer-col a:hover {
-  color: var(--white);
-  text-decoration: none;
+  color: #444;
+  margin: 6px 0;
 }
