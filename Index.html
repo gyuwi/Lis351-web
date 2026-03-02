@@ -5,319 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gyurme Namgyal | Engineering Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-
-  <style>
-
-  :root{
-    --bg: #f5f7ff;
-    --card: #ffffff;
-    --text: #0b1b2a;
-    --muted: #475569;
-    --line: #e5e7eb;
-    --primary: #1d4ed8;
-    --primaryHover: #173ea8;
-    --soft: #eaf2ff;
-  }
-
-  *{ box-sizing: border-box; }
-
-  body{
-    margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text);
-    background: var(--bg);
-  }
-
-  header{
-    padding: 18px 22px;
-    background: var(--card);
-    border-bottom: 1px solid var(--line);
-    position: sticky;
-    top: 0;
-  }
-
-  .brand{ font-weight: 800; letter-spacing: 0.2px; }
-
-  nav ul{
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  nav a{
-    text-decoration: none;
-    color: var(--text);
-    padding: 8px 10px;
-    border-radius: 10px;
-  }
-
-  nav a:hover{ background: var(--soft); }
-
-  main{
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 22px;
-  }
-
-  section{ margin: 28px 0; }
-
-  .hero{
-    background: var(--soft);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 26px 18px;
-  }
-
-  .hero h1{
-    margin: 0 0 8px;
-    font-size: clamp(28px, 3.2vw, 44px);
-  }
-
-  .small{ color: var(--muted); font-size: 0.95rem; }
-
-
-  .button{
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 14px;
-    border-radius: 12px;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    font-weight: 650;
-  }
-  .button:hover{ background: var(--primaryHover); }
-
-
-  .grid3{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-  }
-
-  .card{
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 14px;
-  }
-
-  .featured{
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 14px;
-    align-items: start;
-  }
-
-  .featured img,
-  .proj-media img{
-    width: 100%;
-    height: auto;
-    border-radius: 14px;
-    border: 1px solid var(--line);
-  }
-
-  .two-col{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 14px;
-  }
-
-  figure{ margin: 0; }
-  figcaption{ color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
-
- 
-  .cta{
-    border-radius: 16px;
-    padding: 18px;
-    background: #0b1b2a;
-    color: white;
-  }
-
-  .cta .button{
-    background: #22c55e;
-    color: #052e16;
-  }
-  .cta .button:hover{ filter: brightness(0.95); }
-
-  footer{
-    border-top: 1px solid var(--line);
-    padding: 18px 22px;
-    background: var(--card);
-  }
-
-  footer ul{
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-
-  footer a{ color: var(--text); }
-
-  code{ background: #eef2ff; padding: 0 6px; border-radius: 8px; }
-</style>
-
 </head>
 
 <body>
 
-  <header>
-    <div class="brand"><a href="#top">Gyurme Namgyal | Engineering Portfolio</a></div>
-
-    <nav aria-label="Primary navigation">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        Gyurme Namgyal<span class="dot">.</span>
+      </div>
+      
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
 
-    <section class="hero" id="top">
-      <h1>Engineer, training to build useful things.</h1>
-      <p class="small">
-        This is a resume style portfolio that highlights my engineering work, projects, and skills.
-      </p>
-      <a class="button" href="#projects">Get Started: View Projects</a>
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Engineer, training to build useful things</h1>
+        <p class="hero-subhead">Building a career through hands-on fabrication and problem solving.</p>
+        <a href="#projects" class="btn btn-dark">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
     </section>
 
-    <section aria-labelledby="features-title">
-      <h2 id="features-title">What I focus on</h2>
-      <div class="grid3">
-        <div class="card">
-          <h3>Design & Build</h3>
-          <p>I like turning ideas into real prototypes—CAD, assembly, testing, and iteration.</p>
-        </div>
-        <div class="card">
-          <h3>Analysis & Data</h3>
-          <p>I use math and code to validate designs: forces, stress, energy balances, and simple models.</p>
-        </div>
-        <div class="card">
-          <h3>Systems Thinking</h3>
-          <p>I enjoy integrating sensors, controls, and software into one working system.</p>
+    <section class="features" id="focus">
+      <div class="container">
+        <h2 class="section-title">What I focus on</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="icon">🛠️</div>
+            <h3>Design & Build</h3>
+            <p>I like turning ideas into real prototypes—CAD, assembly, testing, and iteration.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">📊</div>
+            <h3>Analysis & Data</h3>
+            <p>I use math and code to validate designs: forces, stress, energy balances, and simple models.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">⚙️</div>
+            <h3>Systems Thinking</h3>
+            <p>I enjoy integrating sensors, controls, and software into one working system.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about" aria-labelledby="about-title">
-      <h2 id="about-title">Featured: About me</h2>
-      <div class="featured">
-        <div class="card">
-          <p>
-            Hi! I’m Gyurme Namgyal. I’m building an engineering career through coursework and projects that mix
-            hands on fabrication with problem solving. I’m especially interested in mechanical systems, robotics/mechatronics,
-            and applying analysis to improve real-world designs.
-          </p>
-          <p>
-            I’m collecting projects that show my process: defining the goal, designing, building, testing, and documenting
-            what worked and what I’d improve next time.
-          </p>
-
-          <p>Links I use a lot:</p>
-          <ul>
-            <li><a href="https://www.linkedin.com/in/gyurme-namgyal-236630370" target="_blank" rel="noopener">My LinkedIn</a>
-
-            <li><a href="#contact">Email me</a> for a PDF resume or project details</li>
-          </ul>
-        </div>
-
-        <div>
-       
-          <img src="Images/Personal_Picture.png" alt="Portrait of Gyurme Namgyal">
+    <section id="about" class="featured">
+      <div class="container">
+        <h2 class="section-title">About me</h2>
+        <div class="secondary-grid">
+          <div class="card">
+             <div class="card-text">
+                <p>Hi! I’m Gyurme Namgyal. I’m building an engineering career through coursework and projects that mix hands-on fabrication with problem solving.</p>
+                <a href="https://www.linkedin.com/in/gyurme-namgyal-236630370" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
+             </div>
+             <div class="card-image" style="background-image: url('Images/Personal_Picture.png');"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects & engineering endeavors</h2>
+    <section id="projects" class="secondary">
+      <div class="container">
+        <h2 class="section-title">Engineering Endeavors</h2>
+        <div class="secondary-grid">
+          <article class="card">
+            <div class="card-text">
+              <h3>Rotary Fatigue Tester</h3>
+              <p>Built a tester reaching 1,000,000 cycles using Arduino-based sensing and data logging.</p>
+            </div>
+            <div class="card-image img-a"></div>
+          </article>
 
-      <div class="grid3">
-        <article class="card">
-          <h3>Project 1: Rotary Fatigue Tester</h3>
-
-          <figure class="proj-media">
-            <img src="photos/IMG_5239.JPG" alt="Photo of my Rotary Fatigue Tester project setup.">
-            <figcaption>Rotary Fatigue Tester</figcaption>
-          </figure>
-
-          <p><strong>Goal:</strong> Build a rotary fatigue tester capable of reaching 1,000,000 continuous strain cycles in ~24 hours.</p>
-          <p><strong>Tools:</strong> Mechanical build + Arduino-based sensing and data logging.</p>
-          <p><strong>Result:</strong> Developed a motion detection system to monitor failures and log cycle counts automatically.</p>
-        </article>
-
-        <article class="card">
-          <h3>Project 2: Autonomous IR Path-Finding Robot</h3>
-
-          <figure class="proj-media">
-            <img src="photos/IMG_8799.jpeg" alt="Photo of my Autonomous IR Path-Finding Robot prototype.">
-            <figcaption>Autonomous IR Path-Finding Robot</figcaption>
-          </figure>
-
-          <p><strong>Goal:</strong> Build and program an autonomous path-finding robot that logs uneven terrain using infrared light.</p>
-          <p><strong>Tools:</strong> Microcontroller programming + IR sensing + prototype hardware integration.</p>
-          <p><strong>Result:</strong> Prototyped a smart device pairing workflow for sensor calibration and autonomous movement.</p>
-        </article>
-      </div>
-    </section>
-
-    <section aria-labelledby="secondary-title">
-      <h2 id="secondary-title">More highlights</h2>
-      <div class="two-col">
-        <div class="card">
-          <h3>Coursework I’m proud of</h3>
-          <p>
-            Statics, materials, thermo, and design courses where I practiced clean problem setup, correct assumptions,
-            and clear documentation.
-          </p>
-        </div>
-        <div class="card">
-          <h3>What I’m learning next</h3>
-          <p>
-            Better version control (Git), stronger documentation, and building projects that can be shared as case studies.
-          </p>
+          <article class="card">
+            <div class="card-text">
+              <h3>IR Path-Finding Robot</h3>
+              <p>Autonomous robot using infrared light to navigate and log uneven terrain.</p>
+            </div>
+            <div class="card-image img-b"></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" aria-labelledby="skills-title">
-      <h2 id="skills-title">Skills snapshot</h2>
-      <p>Here are some skills I can bring to a team. (Edit this list to match your real experience.)</p>
-      <ul>
-        <li><strong>Design:</strong> CAD, drawings, tolerances, rapid prototyping</li>
-        <li><strong>Build:</strong> basic fabrication, assembly, test plans, iteration</li>
-        <li><strong>Analysis:</strong> free-body diagrams, statics, simple models, spreadsheets</li>
-        <li><strong>Programming:</strong> Python / MATLAB / R (choose what applies)</li>
-        <li><strong>Communication:</strong> clear write-ups, presentations, teamwork</li>
-      </ul>
-    </section>
-
-    <section class="cta" id="contact" aria-labelledby="cta-title">
-      <h2 id="cta-title">Heard enough?</h2>
-      <p>Let’s connect. I can share a PDF resume, project files, or call.</p>
-   
-      <a class="button" href="mailto:gnamgyal2@wisc.edu">gnamgyal2@wisc.edu</a>
-      <p class="small" style="color: rgba(219,234,254,0.92); margin-top:10px;"></p>
+    <section class="cta" id="contact">
+      <div class="container cta-inner">
+        <h2>Heard enough?</h2>
+        <p>Let’s connect. I can share a PDF resume, project files, or call.</p>
+        <a class="btn btn-dark" href="mailto:gnamgyal2@wisc.edu">gnamgyal2@wisc.edu</a>
+      </div>
     </section>
 
   </main>
 
-  <footer>
-    <div>© 2026 Gyurme Namgyal</div>
-    <ul>
-      <li><a href="#top">Back to top</a></li>
-      <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">HTML Validator</a></li>
-      <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
-    </ul>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© 2026 Gyurme Namgyal. Built for LIS 351.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3>Links</h3> <a href="https://validator.w3.org/" target="_blank">HTML Validator</a>
+          <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
 </body>
